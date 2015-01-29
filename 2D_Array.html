@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var myArray1 = new Array(10);
+
+for (i = 0; i<10; i++){
+ myArray1[i] = new Array(10);
+}
+
+for (var i = 0; i < 10; i++ ){
+	for(var j=0; j <10; j++ ){
+		if(i%2==0 && ( j== 2 || j==5 || j==8 )){
+			myArray1[i][j]=1;
+		}else if(i%2==1 && (j== 1 || j==4 || j==7 )){
+			myArray1[i][j]=1;
+		}
+		else{
+			myArray1[i][j]=0;
+		}
+	}
+}
+
+
+for (var i = 0; i < 10; i++ ){
+	for(var j=0; j <10; j++ ){
+		document.write(myArray1[i][j] + "&emsp;")
+	}
+	document.write("<br>");
+}
+</script>
+</body>
+</html>
